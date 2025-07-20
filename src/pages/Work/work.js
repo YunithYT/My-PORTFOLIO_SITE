@@ -130,7 +130,7 @@ function Work() {
                             <br /><strong>Stack:</strong> Spring Boot
                         </p>
                         <div className="button-wrap">
-                            <a href=" https://global-chat-app-qyi4.onrender.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://global-chat-app-qyi4.onrender.com" target="_blank" rel="noopener noreferrer">
                                 <button className="button">Visit &rarr;</button>
                             </a>
                         </div>
@@ -149,7 +149,7 @@ function Work() {
                             <br /><strong>Stack:</strong> Flutter / Dart
                         </p>
                         <div className="button-wrap">
-                            <a href=" https://mausamapp-59c48.web.app" target="_blank" rel="noopener noreferrer">
+                            <a href="https://mausamapp-59c48.web.app" target="_blank" rel="noopener noreferrer">
                                 <button className="button">Visit &rarr;</button>
                             </a>
                         </div>
