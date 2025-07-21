@@ -1,20 +1,20 @@
-// main.jsx
-import React from 'react'
+// src/routes/main.js (Corrected Version)
 
-const Home = React.lazy(() => import('./../pages/Home/home'));
-const Blog = React.lazy(() => import('./../pages/Blog/blog'));
-const Work = React.lazy(() => import('./../pages/Work/work'));
-const Contact = React.lazy(() => import('./../pages/Contact/contact'));
-const Preloader = React.lazy(() => import('./../components/preloader'));
-const Certificates = React.lazy(() => import('./../pages/Certificates')); // ✅ Correct casing
+import React from 'react';
+
+// Use React.lazy for all components for consistency
+const Home = React.lazy(() => import('../pages/Home/home'));
+const Blog = React.lazy(() => import('../pages/Blog/blog'));
+const Work = React.lazy(() => import('../pages/Work/work'));
+const Contact = React.lazy(() => import('../pages/Contact/contact'));
+const Certificates = React.lazy(() => import('../pages/Certificates/certificates')); // <-- CORRECTED THIS LINE
 
 const mainRoutes = [
     { path: '/', name: 'Homepage', component: <Home /> },
     { path: '/blog', name: 'Blog', component: <Blog /> },
     { path: '/work', name: 'Work', component: <Work /> },
     { path: '/contact', name: 'Contact', component: <Contact /> },
-    { path: '/preloader', name: 'Preloader', component: <Preloader /> },
-    { path: '/certificates', name: 'Certificates', component: <Certificates /> }, // ✅ Added route
+    { path: '/certificates', name: 'Certificates', component: <Certificates /> },
 ];
 
 export default mainRoutes;
