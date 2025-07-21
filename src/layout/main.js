@@ -1,31 +1,14 @@
-import React, { Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Header from '../pages/Header/header'
-import Footer from '../pages/Footer/footer'
-import './main.scss'
+// src/routes/main.js
 
-import mainRoutes from '../routes/main'
+import React from 'react';
+import Home from '../pages/Home';
+import Work from '../pages/Work'; // <-- 1. Import your Work component
+import Certificates from '../pages/Certificates';
 
-function MainLayout() {
-    return (
-        <div className="main">
-            <Header />
-            <Suspense fallback={<p>Loading...</p>}>
-                <Routes>
-                    {mainRoutes.map((prop, key) => {
-                        return (
-                            <Route
-                                path={prop.path}
-                                key={key}
-                                element={prop.component}
-                            ></Route>
-                        )
-                    })}
-                </Routes>
-            </Suspense>
-            <Footer />
-        </div>
-    );
-}
+const mainRoutes = [
+  { path: '/', component: <Home /> },
+  { path: '/work', component: <Work /> }, // <-- 2. Add this line for the work page
+  { path: '/certificates', component: <Certificates /> },
+];
 
-export default MainLayout
+export default mainRoutes;
