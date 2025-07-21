@@ -1,13 +1,15 @@
 // src/routes/mainRoutes.js
 
 import React from 'react';
-import Home from '../pages/Home';
-import Work from '../pages/Work'; // <-- 1. Import your Work component
-import Certificates from '../pages/Certificates';
+
+// Corrected import paths to match your file structure and case
+import Home from '../pages/Home/home';
+import Work from '../pages/Work/work';
+import Certificates from '../pages/Certificates/certificates';
 
 const mainRoutes = [
   { path: '/', component: <Home /> },
-  { path: '/work', component: <Work /> }, // <-- 2. Add the route for your work page
+  { path: '/work', component: <Work /> },
   { path: '/certificates', component: <Certificates /> },
 ];
 
