@@ -143,7 +143,7 @@ function Header() {
                     <ul>
                         <li className="menu-one"><NavLink className="nav-link" onClick={check} to="/">Home</NavLink></li>
                         <li className="menu-two"><NavLink className="nav-link" onClick={check} to="/work">Work</NavLink></li>
-                        <li className="menu-three"><a className="nav-link" href="http://localhost:3000/certificates" target="_blank">Showroom</a></li>
+                        <li className="menu-three"><a className="nav-link" href="https://my-portfolio-site-fawn-kappa.vercel.app/certificates" target="_blank">Showroom</a></li>
                         <li className="menu-four"><a className="nav-link" href="https://drive.google.com/file/d/1oZprPSu9NL3u-1Dxl0AGa7tpFoAYHJ1j/view?usp=drive_link" target="_blank">Resume</a></li>
                         <li className="menu-five"><a className="nav-link" href="yunithgowda20@gmail.com" target="_blank">Contact</a></li>
                     </ul>
