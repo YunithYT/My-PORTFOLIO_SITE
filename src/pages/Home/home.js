@@ -24,31 +24,31 @@ import sqlLogo from './../../assets/images/sql.jpg';
 const Data = [
     {
         id: 0,
-        img: "https://ik.imagekit.io/onyedika/phoneapp_oXM1Z9FA_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1667104369642",
+        img: "/accidentdetection.jpg",
     },
     {
         id: 1,
-        img: "https://ik.imagekit.io/onyedika/slide/pipar-beta?ik-sdk-version=javascript-1.4.3&updatedAt=1664831519274",
+        img: "/devxconnect.jpg",
     },
     {
         id: 2,
-        img: "https://ik.imagekit.io/onyedika/slide/pipar_peinACEKO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256618",
+        img: "/todolist.jpg",
     },
     {
         id: 3,
-        img: "https://ik.imagekit.io/onyedika/slide/calender_S6GI-SE7_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256123",
+        img: "/buspassenger.jpg",
     },
     {
         id: 4,
-        img: "https://ik.imagekit.io/onyedika/slide/movie_Si8QWOouP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256396",
+        img: "/antisleep.jpg",
     },
     {
         id: 5,
-        img: "https://ik.imagekit.io/onyedika/slide/natour_QGZwpr7Ta.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256510",
+        img: "/chatapp.jpg",
     },
     {
         id: 6,
-        img: "https://ik.imagekit.io/onyedika/slide/ncehr_GV14iEwWG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256179",
+        img: "/weather.jpg",
     },
     {
         id: 7,
