@@ -47,7 +47,7 @@ const ProjectSlider = ({setBackground}) => {
                   <p className='desc'>{slide.description}</p>
                   <span>
                   <p className='stack'>{slide.stack}</p>
-                  <a href={slide.link} target='_blank'>visit ↵</a>
+                  <a href="https://my-portfolio-site-fawn-kappa.vercel.app/work" target='_blank'>visit ↵</a>
                   </span>
               </div>
               </>
