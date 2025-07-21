@@ -1,6 +1,6 @@
 // src/pages/Work/work.js (Final Corrected Version)
 
-import React, { useEffect, useRef } from 'react'; // 1. Import useEffect and useRef
+import React, { useEffect, useRef } from 'react';
 import './work.scss';
 import accidentDetectionImg from "../../assets/images/accidentdetection.jpg";
 import devxconnectImg from "../../assets/images/devxconnect.jpg";
@@ -11,7 +11,7 @@ import chatappImg from "../../assets/images/chatapp.jpg";
 import weatherappImg from "../../assets/images/weather.jpg";
 
 function Work() {
-    const workRef = useRef(null); // 2. Create a ref to attach to the main div
+    const workRef = useRef(null);
 
     // This effect runs once when the Work component first loads
     useEffect(() => {
@@ -24,7 +24,7 @@ function Work() {
     }, []); // The empty array [] ensures this runs only once
 
     return (
-        // 3. Add the ref and a default 'hidden' class to the main container
+        // Add the ref and a default 'hidden' class to the main container
         <div className="work hidden" ref={workRef}>
             <div className="work-header">
                 <span>
@@ -38,8 +38,6 @@ function Work() {
                 </span>
             </div>
             <div className="projects">
-                {/* All your project divs from your original file go here. */}
-                {/* They will now be visible because their parent container is visible. */}
                 <div className="single">
                     <div className="single-img"><img src={accidentDetectionImg} alt="Accident Detection"/></div>
                     <div className="single-detail"><h4>Accident Detection</h4><p>Detects vehicle accidents using shake intensity. Captures in-cabin images and sends location alerts to transport authorities.<br/><strong>Stack:</strong> Python</p><div className="button-wrap"><a href="https://github.com/YunithYT/project-omega" target="_blank" rel="noopener noreferrer"><button className="button">Visit &rarr;</button></a></div></div>

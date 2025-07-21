@@ -1,6 +1,15 @@
 .work {
     margin-top: 15rem;
 
+    // Add these classes for the parent container animation
+    &.hidden {
+        opacity: 0;
+    }
+    &.show {
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+    }
+
     .work-header {
         display: flex;
         justify-content: flex-start;
@@ -32,7 +41,7 @@
             transform: none; // Resets any starting transforms
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        /* Optional but recommended: Stagger the animation for a nice effect */
+        /* Optional: Stagger the animation for a nice effect */
         .work.show & .single:nth-child(1) { transition-delay: 0.1s; }
         .work.show & .single:nth-child(2) { transition-delay: 0.2s; }
         .work.show & .single:nth-child(3) { transition-delay: 0.3s; }
@@ -137,7 +146,7 @@
                     font-size: 18px;
                     text-align: center;
                     margin-bottom: 3.5rem;
-                    line-height: 1.6; // Improved readability
+                    line-height: 1.6;
                     @media (max-width: 759px) { font-size: 17px; }
                     @media (max-width: 479px) { font-size: 16px; }
                 }
