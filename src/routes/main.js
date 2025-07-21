@@ -7,7 +7,7 @@ const Home = React.lazy(() => import('../pages/Home/home'));
 const Blog = React.lazy(() => import('../pages/Blog/blog'));
 const Work = React.lazy(() => import('../pages/Work/work'));
 const Contact = React.lazy(() => import('../pages/Contact/contact'));
-const Certificates = React.lazy(() => import('../pages/Work/certificates')); // <-- CORRECTED THIS LINE
+const Certificates = React.lazy(() => import('../pages/Work/Certificates')); // <-- CORRECTED THIS LINE
 
 const mainRoutes = [
     { path: '/', name: 'Homepage', component: <Home /> },
