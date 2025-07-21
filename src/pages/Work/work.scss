@@ -1,52 +1,22 @@
 .work {
     margin-top: 15rem;
-    @media (min-width: 1025px) and (max-width: 1300px){
-    }
-    @media (min-width: 760px) and (max-width: 1024px) {
-    }
-    @media (min-width: 480px) and (max-width: 759px) {
-    }
-    @media (max-width: 479px) {
-    }
+
     .work-header {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         padding-left: 5rem;
-        @media (min-width: 1025px) and (max-width: 1300px){
-        }
-        @media (min-width: 760px) and (max-width: 1024px) {
-        }
-        @media (min-width: 480px) and (max-width: 759px) {
-        }
-        @media (max-width: 479px) {
-        }
         span {
             display: flex;
-            @media (min-width: 1025px) and (max-width: 1300px){
-            }
-            @media (min-width: 760px) and (max-width: 1024px) {
-            }
-            @media (min-width: 480px) and (max-width: 759px) {
-            }
-            @media (max-width: 479px) {
-            }
             h2 {
                 margin: 0 .5rem;
                 padding: 0;
                 font-family: "Cyborg";
                 font-weight: 900;
-                @media (min-width: 1025px) and (max-width: 1300px){
-                }
-                @media (min-width: 760px) and (max-width: 1024px) {
-                }
-                @media (min-width: 480px) and (max-width: 759px) {
-                }
-                @media (max-width: 479px) {
-                }
             }
         }
     }
+
     .projects {
         display: flex;
         flex-direction: column;
@@ -54,140 +24,81 @@
         align-items: center;
         margin: 3rem 0 7rem 0;
         padding: 0rem 5rem;
-        @media (min-width: 1025px) and (max-width: 1300px){
+
+        /* --- THIS IS THE FIX --- */
+        /* It forces individual project cards to appear when the main 'work' page loads. */
+        .work.show & .single {
+            opacity: 1;
+            transform: none; // Resets any starting transforms
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        @media (min-width: 760px) and (max-width: 1024px) {
-        }
-        @media (min-width: 480px) and (max-width: 759px) {
-        }
-        @media (max-width: 479px) {
-        }
+        /* Optional but recommended: Stagger the animation for a nice effect */
+        .work.show & .single:nth-child(1) { transition-delay: 0.1s; }
+        .work.show & .single:nth-child(2) { transition-delay: 0.2s; }
+        .work.show & .single:nth-child(3) { transition-delay: 0.3s; }
+        .work.show & .single:nth-child(4) { transition-delay: 0.4s; }
+        .work.show & .single:nth-child(5) { transition-delay: 0.5s; }
+        .work.show & .single:nth-child(6) { transition-delay: 0.6s; }
+        .work.show & .single:nth-child(7) { transition-delay: 0.7s; }
+        /* --- END OF FIX --- */
+
         .single {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
             margin: 6rem 0rem;
-            @media (min-width: 1025px) and (max-width: 1300px){
-            }
-            @media (min-width: 760px) and (max-width: 1024px) {
+            
+            // Set the default "hidden" state for the animation
+            opacity: 0;
+            transform: translateY(30px);
+
+            @media (max-width: 1024px) {
                 flex-direction: column;
                 margin: 5rem 0rem;
             }
-            @media (min-width: 480px) and (max-width: 759px) {
-                flex-direction: column;
+            @media (max-width: 759px) {
                 margin: 3rem 0rem;
             }
             @media (max-width: 479px) {
-                flex-direction: column;
                 margin: 2rem 0rem;
             }
+            
             &.reverse {
                 flex-direction: row-reverse;
-                @media (min-width: 1025px) and (max-width: 1300px){
-                }
-                @media (min-width: 760px) and (max-width: 1024px) {
-                    flex-direction: column;
-                }
-                @media (min-width: 480px) and (max-width: 759px) {
-                    flex-direction: column;
-                }
-                @media (max-width: 479px) {
+                @media (max-width: 1024px) {
                     flex-direction: column;
                 }
                 .single-img img {
-                    transform:
-                      perspective(800px)
-                      rotateY(-25deg) scale(0.8)
-                      rotateX(10deg);
-                      filter: blur(0px);
-                      opacity: 1;
-                      transition: 0.6s ease all;
-                      &:hover {
-                        box-shadow: 0px 19px 67px -38px rgba(155,156,159,0.8);
-                        transform:
-                          perspective(800px)
-                          rotateY(15deg)
-                          translateY(50px)
-                          rotateX(10deg)
-                          scale(1);
-                        filter: blur(.2px);
-                        opacity: 1;
-                      }
-                    @media (min-width: 1025px) and (max-width: 1300px){
-                    }
-                    @media (min-width: 760px) and (max-width: 1024px) {
-                    }
-                    @media (min-width: 480px) and (max-width: 759px) {
-                    }
-                    @media (max-width: 479px) {
-                    } 
-                }
-                .single-detail {
-                    // align-items: flex-start;
-                    @media (min-width: 1025px) and (max-width: 1300px){
-                    }
-                    @media (min-width: 760px) and (max-width: 1024px) {
-                    }
-                    @media (min-width: 480px) and (max-width: 759px) {
-                    }
-                    @media (max-width: 479px) {
+                    transform: perspective(800px) rotateY(-25deg) scale(0.8) rotateX(10deg);
+                    &:hover {
+                        transform: perspective(800px) rotateY(15deg) translateY(50px) rotateX(10deg) scale(1);
                     }
                 }
             }
+            
             .single-img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 60%;
-                @media (min-width: 1025px) and (max-width: 1300px){
-                }
-                @media (min-width: 760px) and (max-width: 1024px) {
-                    width: 100%;
-                }
-                @media (min-width: 480px) and (max-width: 759px) {
-                    width: 100%;
-                }
-                @media (max-width: 479px) {
-                    width: 100%;
-                }
+                @media (max-width: 1024px) { width: 100%; }
+
                 img {
                     width: 700px;
                     height: 398px;
                     border-radius: 15px;
-                    box-shadow: rgba(155,156,159, 0.42) 0px 60px 123px -25px,
-                    rgba(155,156,159, 0.08) 0px 35px 75px -35px;
-                    transform:
-                      perspective(800px)
-                      rotateY(25deg) scale(0.8)
-                      rotateX(10deg);
-                      filter: blur(0px);
-                      opacity: 1;
-                      transition: 0.6s ease all;
-                      &:hover {
+                    box-shadow: rgba(155,156,159, 0.42) 0px 60px 123px -25px, rgba(155,156,159, 0.08) 0px 35px 75px -35px;
+                    transform: perspective(800px) rotateY(25deg) scale(0.8) rotateX(10deg);
+                    filter: blur(0px);
+                    opacity: 1;
+                    transition: 0.6s ease all;
+                    &:hover {
                         box-shadow: 0px 19px 67px -38px rgba(155,156,159,0.8);
-                        transform:
-                          perspective(800px)
-                          rotateY(-15deg)
-                          translateY(-50px)
-                          rotateX(10deg)
-                          scale(1);
+                        transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
                         filter: blur(.2px);
-                        opacity: 1;
-                        @media (min-width: 1025px) and (max-width: 1300px){
-                        }
-                        @media (min-width: 760px) and (max-width: 1024px) {
-                        }
-                        @media (min-width: 480px) and (max-width: 759px) {
-                        }
-                        @media (max-width: 479px) {
-                        }
-                      }
-                    @media (min-width: 1025px) and (max-width: 1300px){
                     }
-                    @media (min-width: 760px) and (max-width: 1024px) {
-                    }
-                    @media (min-width: 480px) and (max-width: 759px) {
+                    @media (max-width: 759px) {
                         width: 500px;
                         height: 284px;
                     }
@@ -197,6 +108,7 @@
                     }
                 }
             }
+
             .single-detail {
                 display: flex;
                 justify-content: center;
@@ -205,57 +117,31 @@
                 width: 40%;
                 color: #fff;
                 padding: 1rem;
-                @media (min-width: 1025px) and (max-width: 1300px){
-                }
-                @media (min-width: 760px) and (max-width: 1024px) {
-                    width: 100%;
-                }
-                @media (min-width: 480px) and (max-width: 759px) {
-                    width: 100%;
-                }
-                @media (max-width: 479px) {
-                    width: 100%;
-                }
+                @media (max-width: 1024px) { width: 100%; }
+
                 h4 {
-                   border: 3px solid #14e956;
-                   color: #14e956;
-                   box-shadow: 6px 6px 0px 0px rgba(20,233,86,1);
-                   text-transform: uppercase; 
-                   font-weight: 700;
-                   padding: .7rem 1.1rem;
-                   font-family: "Cyborg";
-                   font-weight: 900;
-                   margin-bottom: 3rem;
-                   @media (min-width: 1025px) and (max-width: 1300px){
+                    border: 3px solid #14e956;
+                    color: #14e956;
+                    box-shadow: 6px 6px 0px 0px rgba(20,233,86,1);
+                    text-transform: uppercase; 
+                    font-family: "Cyborg";
+                    font-weight: 900;
+                    padding: .7rem 1.1rem;
+                    margin-bottom: 3rem;
+                    @media (max-width: 759px) { font-size: 1.8rem; }
+                    @media (max-width: 479px) { font-size: 1.5rem; }
                 }
-                @media (min-width: 760px) and (max-width: 1024px) {
-                }
-                @media (min-width: 480px) and (max-width: 759px) {
-                    font-size: 1.8rem;
-                }
-                @media (max-width: 479px) {
-                    font-size: 1.5rem;
-                }
-                }
+
                 p {
                     margin: 0;
                     font-size: 18px;
                     text-align: center;
                     margin-bottom: 3.5rem;
-                    @media (min-width: 1025px) and (max-width: 1300px){
-                    }
-                    @media (min-width: 760px) and (max-width: 1024px) {
-                    }
-                    @media (min-width: 480px) and (max-width: 759px) {
-                        font-size: 17px;
-                    }
-                    @media (max-width: 479px) {
-                        font-size: 16px;
-                    }
-                    span {
-                        color: #14e956;
-                    }
+                    line-height: 1.6; // Improved readability
+                    @media (max-width: 759px) { font-size: 17px; }
+                    @media (max-width: 479px) { font-size: 16px; }
                 }
+
                 .button-wrap {
                     height: max-content;
                     display: flex;
