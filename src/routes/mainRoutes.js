@@ -5,7 +5,7 @@ import React from 'react';
 // Corrected import paths to match your file structure and case
 import Home from '../pages/Home/home';
 import Work from '../pages/Work/work';
-import Certificates from '../pages/Certificates/certificates';
+import Certificates from '../pages/Work/Certificates';
 
 const mainRoutes = [
   { path: '/', component: <Home /> },
