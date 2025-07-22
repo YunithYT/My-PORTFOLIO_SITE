@@ -1,0 +1,53 @@
+.certificates {
+    padding: 2rem;
+    background: #0a0a0a;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+  
+    h1 {
+      color: #00ff88;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  
+    .card {
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 255, 136, 0.3);
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.03);
+      }
+  
+      img {
+        width: 100%;
+        display: block;
+      }
+  
+      .info {
+        padding: 1rem;
+        background-color: #1c1c1c;
+  
+        h3 {
+          color: #00ff88;
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+        }
+  
+        p {
+          color: #ccc;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  

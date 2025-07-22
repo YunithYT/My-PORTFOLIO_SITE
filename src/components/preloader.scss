@@ -1,0 +1,121 @@
+.anime {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0a0a;
+
+  .load {
+    // The container only handles the animation.
+    animation: fadeInUp 1s ease forwards, fadeOutUp 1s ease forwards 5s;
+
+    // --- Responsive, contained SVG logo ---
+    svg {
+      width: 85vw;         // Use 85% of the screen's width for a big logo.
+      max-width: 1100px;   // Prevent the logo from being too huge on large desktops.
+      height: auto;        // Let the height scale automatically to maintain aspect ratio.
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .preload {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+      width: 70vw !important;
+    }
+    .progress {
+      width: 70vw !important;
+      color: #14e956 !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    @media (max-width: 759px) {
+      background-size: contain;
+
+      .loader,
+      .progress {
+        width: 90vw !important;
+      }
+    }
+  }
+}
+
+// MUI Progress Bar Overrides
+.css-eglki6-MuiLinearProgress-root,
+.css-7p5u54 {
+  height: 5px !important;
+  background-color: #e8fdee !important;
+  border-radius: 5px !important;
+}
+
+.css-5xe99f-MuiLinearProgress-bar1,
+.css-t752vm {
+  background-color: #14e956 !important;
+}
+
+.css-1kjyx0o-MuiTypography-root,
+.css-16e5s8c {
+  margin-top: 2rem !important;
+  font-family: "ExoSpace", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 2rem !important;
+  line-height: 1.43;
+
+  @media (max-width: 759px) {
+    font-size: 1.5rem !important;
+    line-height: 1.15 !important;
+  }
+
+  @media (max-width: 479px) {
+    font-size: 1.2rem !important;
+    line-height: 1 !important;
+  }
+}
+
+// Animations
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #14e956;
+    stroke: #14e956;
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
